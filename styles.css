@@ -1,0 +1,46 @@
+*{box-sizing:border-box}
+:root{color-scheme:dark;--black:#050505;--white:#f4f4f4;--muted:#92959c;--line:#292b30;--red:#ff202b;--blue:#168cff}
+html{scroll-behavior:smooth;scroll-padding-top:82px}
+body{margin:0;background:var(--black);color:var(--white);font-family:"IBM Plex Mono",Consolas,monospace}
+a{color:inherit;text-decoration:none}
+.site-header{height:66px;position:fixed;z-index:20;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:0 2.6%;background:rgba(0,0,0,.94);border-bottom:1px solid #252525;backdrop-filter:blur(10px)}
+.wordmark{font-size:25px;font-weight:600;font-style:italic;letter-spacing:-2px;color:#fff;text-shadow:1px 1px 0 #777}
+.wordmark span,.hero h1 span,.section-heading h2 span{color:var(--red)}
+.nav{display:flex;align-items:center;gap:22px;font-size:15px}
+.nav-link{color:#eee;transition:color .2s}
+.nav-link:hover,.nav-link.active{color:var(--blue)}
+.separator{color:#aaa}
+.nav-link.discord{color:#2464ff}
+.nav-link.github{color:#eee}
+.menu-toggle{display:none;background:none;border:0;color:white;font-size:24px}
+.hero{min-height:100vh;position:relative;display:flex;align-items:center;padding:110px 5.9% 100px;overflow:hidden;background:#030303}
+.hero-art{position:absolute;inset:66px 0 55px 25%;background-image:linear-gradient(90deg,#030303 0%,rgba(3,3,3,.82) 7%,rgba(3,3,3,.12) 44%,rgba(3,3,3,.12) 100%),linear-gradient(0deg,#030303 0%,transparent 18%,transparent 86%,#030303 100%),url("assets/hunter-background.jpg");background-size:cover;background-position:center center;opacity:.9}
+.hero-content{position:relative;z-index:1;max-width:650px;margin-top:-15px}
+.hero h1{font-size:clamp(66px,7vw,108px);line-height:.98;letter-spacing:-7px;margin:0 0 22px;font-weight:600;font-style:italic;text-shadow:2px 2px 0 #777}
+.terminal-line{font-size:15px;white-space:nowrap;margin:0 0 23px;color:#eee}
+.prompt{color:#eee}.red{color:var(--red)}.blue{color:#176bff}.pipe{color:#eee;margin:0 18px}
+.hero h2{font-size:clamp(23px,2.1vw,32px);font-weight:500;letter-spacing:-1px;margin:0 0 23px;white-space:nowrap}
+.hero h2 span{color:#858991}
+.intro{font-size:15px;line-height:1.85;color:#ddd;margin:0;max-width:610px}
+.hero-bottom{display:none}
+.hero-bottom .motto{margin-left:auto;color:#9a9da3}.motto i{font-style:normal;padding:0 14px;color:#777}
+.content-section{max-width:1120px;margin:0 auto;padding:115px 7% 120px;border-top:1px solid #181818;min-height:65vh}
+.section-heading .eyebrow{color:var(--blue);font-size:12px;letter-spacing:1.5px;margin:0 0 15px}
+.section-heading h2{font-size:clamp(42px,6vw,68px);letter-spacing:-3px;margin:0 0 15px}
+.section-intro{color:#a3a5aa;font-size:14px;line-height:1.8}
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin:38px 0 28px}
+.filter{font:inherit;font-size:12px;color:#aaa;background:transparent;border:1px solid #333;padding:10px 14px;cursor:pointer}
+.filter:hover,.filter.active{color:#fff;border-color:var(--blue)}
+.writeup-list{border-top:1px solid #292929}
+.empty-state{padding:38px 0;color:#999}
+.empty-mark{color:var(--red);font-size:12px}
+.empty-state h3{color:#eee;font-size:18px;font-weight:500}
+.empty-state p{font-size:13px}
+.about-section{display:grid;grid-template-columns:1fr 1.2fr;gap:60px;min-height:55vh}
+.about-copy{padding-top:5px;color:#a9abb0;font-size:14px;line-height:2}
+.about-lead{font-size:19px;color:#eee;line-height:1.7;margin-top:0}
+.focus-line{margin:28px 0;color:#eee;font-size:12px}
+.focus-line span{color:var(--red);margin-right:10px}.focus-line b{color:#666;padding:0 5px}
+.text-link{display:inline-block;color:var(--blue);font-size:12px;margin-top:15px}
+@media(max-width:760px){.site-header{height:62px;padding:0 5%}.menu-toggle{display:block}.nav{display:none;position:absolute;top:61px;left:0;right:0;padding:18px 5%;background:#050505;border-bottom:1px solid #292929;flex-wrap:wrap;gap:14px}.nav.open{display:flex}.separator{display:none}.hero{min-height:780px;padding:125px 6% 120px;align-items:flex-start}.hero-art{inset:62px 0 65px 0;background-position:58% center;opacity:.65;background-image:linear-gradient(90deg,rgba(0,0,0,.92),rgba(0,0,0,.55)),linear-gradient(0deg,#030303 0%,transparent 28%,transparent 82%,#030303 100%),url("assets/hunter-background.jpg")}.hero-content{margin-top:70px}.hero h1{font-size:70px;letter-spacing:-5px}.terminal-line{font-size:11px;white-space:normal;line-height:2}.pipe{margin:0 8px}.hero h2{white-space:normal;font-size:25px;line-height:1.4}.intro{font-size:13px}.desktop-break{display:none}.hero-bottom{left:5%;right:5%;bottom:20px;flex-wrap:wrap;gap:9px;font-size:9px}.hero-bottom .motto{width:100%;margin:8px 0 0}.content-section{padding:85px 7%}.about-section{display:block}.about-copy{margin-top:38px}.focus-line{line-height:2.2}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
