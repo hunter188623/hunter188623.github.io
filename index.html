@@ -1,186 +1,85 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>HUNTER | Security Research</title>
-
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            background: #0a0a0a;
-            color: #e5e5e5;
-            font-family: Arial, sans-serif;
-        }
-
-        header {
-            border-bottom: 1px solid #222;
-            padding: 25px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            color: #00ff88;
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        nav a {
-            color: #aaa;
-            text-decoration: none;
-            margin-left: 25px;
-        }
-
-        nav a:hover {
-            color: #00ff88;
-        }
-
-        .hero {
-            padding: 120px 8%;
-            max-width: 1000px;
-        }
-
-        .hero h1 {
-            font-size: 60px;
-            margin-bottom: 15px;
-        }
-
-        .hero h1 span {
-            color: #00ff88;
-        }
-
-        .hero p {
-            color: #888;
-            font-size: 20px;
-            line-height: 1.6;
-            max-width: 700px;
-        }
-
-        .section {
-            padding: 50px 8%;
-        }
-
-        .section h2 {
-            margin-bottom: 30px;
-            color: #00ff88;
-        }
-
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background: #111;
-            border: 1px solid #222;
-            padding: 25px;
-            border-radius: 8px;
-        }
-
-        .card h3 {
-            margin-bottom: 10px;
-        }
-
-        .card p {
-            color: #777;
-            line-height: 1.5;
-        }
-
-        footer {
-            border-top: 1px solid #222;
-            padding: 30px 8%;
-            color: #555;
-            margin-top: 80px;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050505">
+  <meta name="description" content="HUNTER — bug bounty hunter and security researcher. CTF challenges, security labs, and vulnerability research.">
+  <title>HUNTER. — Breaking things. Understanding why.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-
-<header>
-    <div class="logo">HUNTER</div>
-
-    <nav>
-        <a href="#">Home</a>
-        <a href="#writeups">Writeups</a>
-        <a href="#about">About</a>
+  <header class="site-header">
+    <a class="wordmark" href="#home" aria-label="HUNTER home">HUNTER<span>.</span></a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="nav" aria-label="Main navigation">
+      <a class="nav-link active" href="#home">Home</a>
+      <span class="separator">·</span>
+      <a class="nav-link" href="#writeups">Writeups</a>
+      <span class="separator">·</span>
+      <a class="nav-link" href="#about">About</a>
+      <span class="separator">·</span>
+      <a class="nav-link external github" href="https://github.com/hunter188623" target="_blank" rel="noopener noreferrer">◉ GitHub</a>
+      <a class="nav-link external discord" href="https://discord.com/users/1412391518773444700" target="_blank" rel="noopener noreferrer">◉ Discord ↗</a>
     </nav>
-</header>
+  </header>
 
-<section class="hero">
-    <h1>Security <span>Research</span></h1>
-
-    <p>
-        CTF challenges, bug bounty research, lab writeups,
-        vulnerability research and security notes.
-    </p>
-</section>
-
-<section class="section" id="writeups">
-
-    <h2>Latest Writeups</h2>
-
-    <div class="cards">
-
-        <div class="card">
-            <h3>SSRF</h3>
-            <p>
-                SSRF labs, methodology, internal service discovery
-                and practical techniques.
-            </p>
+  <main>
+    <section class="hero page-section" id="home" aria-labelledby="hero-title">
+      <div class="hero-art" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="hero-title-row">
+          <h1 id="hero-title">HUNTER<span>.</span></h1>
         </div>
+        <p class="terminal-line"><span class="prompt">root@hunter:~#</span> <span class="red">BUG BOUNTY HUNTER</span><span class="pipe">|</span><span class="blue">SECURITY RESEARCHER</span></p>
+        <h2>Breaking things. <span>Understanding why.</span></h2>
+        <p class="intro">Exploring the world of web security. CTF challenges,<br class="desktop-break"> security labs, vulnerability research and technical writeups.</p>
+      </div>
+      <div class="hero-bottom">
+        <span>HUNTER © 2026</span><span class="dash">—</span><span>ALL RIGHTS RESERVED.</span>
+        <span class="motto">CODE <i>/</i> BREAK <i>/</i> LEARN <i>/</i> REPEAT</span>
+      </div>
+    </section>
 
-        <div class="card">
-            <h3>IDOR / BAC</h3>
-            <p>
-                Broken access control research, IDOR testing
-                and authorization bypass techniques.
-            </p>
-        </div>
+    <section class="content-section" id="writeups">
+      <div class="section-heading">
+        <p class="eyebrow">KNOWLEDGE BASE / 01</p>
+        <h2>Writeups<span>.</span></h2>
+        <p class="section-intro">CTF solutions, lab walkthroughs, and notes from security research.</p>
+      </div>
+      <div class="filters" role="group" aria-label="Filter writeups">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="ctf">CTF</button>
+        <button class="filter" data-filter="portswigger">PortSwigger</button>
+        <button class="filter" data-filter="bug-bounty">Bug Bounty</button>
+        <button class="filter" data-filter="web-security">Web Security</button>
+      </div>
+      <div class="writeup-list" id="writeup-list">
+        <article class="empty-state">
+          <span class="empty-mark">[ 0x00 ]</span>
+          <h3>Writeups are being prepared.</h3>
+          <p>New research notes and walkthroughs will appear here.</p>
+        </article>
+      </div>
+    </section>
 
-        <div class="card">
-            <h3>OAuth</h3>
-            <p>
-                OAuth security research, authentication flows
-                and common implementation mistakes.
-            </p>
-        </div>
+    <section class="content-section about-section" id="about">
+      <div class="section-heading">
+        <p class="eyebrow">WHOAMI / 02</p>
+        <h2>About<span>.</span></h2>
+      </div>
+      <div class="about-copy">
+        <p class="about-lead">I'm HUNTER — a bug bounty hunter and security researcher focused on understanding how web applications break.</p>
+        <p>This site is where I document CTF challenges, practice labs, vulnerability research, and the lessons learned along the way.</p>
+        <div class="focus-line"><span>FOCUS</span> Web Security <b>·</b> API Testing <b>·</b> Bug Bounty <b>·</b> CTF</div>
+        <a class="text-link" href="https://discord.com/users/1412391518773444700" target="_blank" rel="noopener noreferrer">CONNECT ON DISCORD ↗</a>
+      </div>
+    </section>
+  </main>
 
-        <div class="card">
-            <h3>API Security</h3>
-            <p>
-                API testing, authentication, authorization
-                and endpoint security research.
-            </p>
-        </div>
-
-    </div>
-
-</section>
-
-<section class="section" id="about">
-
-    <h2>About</h2>
-
-    <p>
-        Security researcher focused on web application security,
-        bug bounty hunting and CTFs.
-    </p>
-
-</section>
-
-<footer>
-    HUNTER © 2026 — Security Research
-</footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
